@@ -2,6 +2,7 @@ docker-jetty
 ====================
 
 CentOS7 + jetty v9.3.11 inside.
+
 [![](https://images.microbadger.com/badges/image/varsy/jetty.svg)](https://microbadger.com/images/varsy/jetty
 "Get your own image badge on microbadger.com")
 [![](https://images.microbadger.com/badges/version/varsy/jetty.svg)](https://microbadger.com/images/varsy/jetty
