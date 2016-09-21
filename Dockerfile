@@ -5,7 +5,8 @@ MAINTAINER Andrey Sizov, andrey.sizov@jetbrains.com
 RUN yum update -y && yum install -y unzip
 
 ENV JAVA_VER=1.8.0_72 JAVA_DWL_VER=8u72 JAVA_DWL_BVER=b15
-ENV JAVA_HOME=/usr/java64/current JDK_HOME=${JAVA_HOME} PATH=${JAVA_HOME}/bin:${PATH}
+ENV JAVA_HOME=/usr/java64/current JDK_HOME=${JAVA_HOME} 
+ENV PATH ${JAVA_HOME}/bin:${PATH}
 
 RUN mkdir -p /usr/java64 ; cd /usr/java64/ ; \
    curl -L -o jdk-${JAVA_DWL_VER}-linux-x64.tar.gz --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/${JAVA_DWL_VER}-${JAVA_DWL_BVER}/jdk-${JAVA_DWL_VER}-linux-x64.tar.gz && \
