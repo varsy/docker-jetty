@@ -16,10 +16,10 @@ RUN mkdir -p /usr/java64 ; cd /usr/java64/ ; \
    chmod -R a+rwX /usr/java64
 
 # jetty
-ENV HOME=/home/jetty JETTY_VER=9.3.11.v20160721 TANUKI_VER=3.5.25
+ENV HOME=/home/jetty JETTY_VER=9.4.7.v20170914 TANUKI_VER=3.5.25
 
 RUN /usr/sbin/useradd jetty && cd /home/jetty && \
-    curl -L -o /home/jetty/jetty.tar.gz "http://eclipse.org/downloads/download.php?file=/jetty/$JETTY_VER/dist/jetty-distribution-$JETTY_VER.tar.gz&r=1" && \
+    curl -L -o /home/jetty/jetty.tar.gz "http://central.maven.org/maven2/org/eclipse/jetty/jetty-distribution/$JETTY_VER/jetty-distribution-$JETTY_VER.tar.gz" && \
     tar zxf /home/jetty/jetty.tar.gz && mv jetty-distribution-$JETTY_VER jetty-current && \
     curl -L -o /home/jetty/wrapper.tar.gz "http://wrapper.tanukisoftware.com/download/$TANUKI_VER/wrapper-linux-x86-64-$TANUKI_VER.tar.gz" && \ 
     tar zxf /home/jetty/wrapper.tar.gz && cp -rp wrapper-linux-*/* /home/jetty/jetty-current/ && \
